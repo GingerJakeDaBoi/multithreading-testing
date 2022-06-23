@@ -1,3 +1,5 @@
+package org.gingerjake.multithreading;
+
 class Runnable2 implements Runnable {
     private Thread t;
     private final String NAME;

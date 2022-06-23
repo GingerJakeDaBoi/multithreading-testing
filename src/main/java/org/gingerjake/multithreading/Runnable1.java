@@ -1,6 +1,8 @@
+package org.gingerjake.multithreading;
+
 class Runnable1 implements Runnable {
     private Thread t;
-    private Runnable2 r2;
+    private Runnable1 r2;
     private final String NAME;
     private final int DELAY;
 
@@ -13,7 +15,7 @@ class Runnable1 implements Runnable {
     public void run() {
         System.out.println("Running " +  NAME);
         if (r2 == null) {
-            r2 = new Runnable2("Thread-2", 4);
+            r2 = new Runnable1("Thread-2", 4);
             r2.start();
         }
         try {
