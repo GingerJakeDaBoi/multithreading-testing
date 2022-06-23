@@ -1,11 +1,11 @@
 package org.gingerjake.multithreading;
 
-class RunnableDemo implements Runnable {
+class Test1 implements Runnable {
    private Thread thread;
    private final String threadName;
    private final int threadDelay;
    
-   RunnableDemo(String name, int delay) {
+   Test1(String name, int delay) {
       threadName = name;
       threadDelay = delay;
       System.out.println("Creating " + threadName );
@@ -13,14 +13,15 @@ class RunnableDemo implements Runnable {
    
    public void run() {
       System.out.println("Running " +  threadName );
-      try {
-         for(int thread = 4; thread > 0; thread--) {
-            System.out.println("Thread: " + threadName + ", " + thread);
-            // Let the thread sleep for a while.
+      System.out.println("Hello World");
+      for(int thread = 4; thread > 0; thread--) {
+         System.out.println("Thread: " + threadName + ", " + thread);
+         //let the thread sleep for a specified time (threadName)
+         try {
             Thread.sleep(threadDelay);
+         } catch (InterruptedException e) {
+            throw new RuntimeException(e);
          }
-      } catch (InterruptedException e) {
-         System.out.println("Thread " +  threadName + " interrupted.");
       }
       System.out.println("Thread " +  threadName + " exiting.");
    }
