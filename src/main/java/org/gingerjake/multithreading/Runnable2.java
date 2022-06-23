@@ -1,9 +1,9 @@
-class Runnable1 implements Runnable {
+class Runnable2 implements Runnable {
     private Thread t;
     private final String NAME;
     private final int DELAY;
 
-    Runnable1(String name, int delay) {
+    Runnable2(String name, int delay) {
         NAME = name;
         DELAY = delay;
         System.out.println("Creating " + NAME);
