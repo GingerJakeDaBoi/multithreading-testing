@@ -13,7 +13,7 @@ class Test1 implements Runnable {
    
    public void run() {
       System.out.println("Running " +  threadName );
-      System.out.println("Hello World");
+      System.out.println("Hello Hunter");
       for(int thread = 4; thread > 0; thread--) {
          System.out.println("Thread: " + threadName + ", " + thread);
          //let the thread sleep for a specified time (threadName)
